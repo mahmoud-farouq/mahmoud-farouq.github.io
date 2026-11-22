@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mahmoud Farouq — Video Editor</title>
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mahmoudfarouq.pages.dev/">
+<meta property="og:title" content="Mahmoud Farouq">
+<meta property="og:description" content="Creative Video Editor Crafting Engaging Content for Brands and Creators">
+<meta property="og:image" content="https://mahmoudfarouq.pages.dev/og-image.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Mahmoud Farouq">
+<meta name="twitter:description" content="Creative Video Editor Crafting Engaging Content for Brands and Creators">
+<meta name="twitter:image" content="https://mahmoudfarouq.pages.dev/og-image.jpg">
+<meta name="description" content="Creative Video Editor Crafting Engaging Content for Brands and Creators">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #121417;
+    --surface: #1a1d22;
+    --border: rgba(255,255,255,0.09);
+    --text: #f2f1ec;
+    --muted: #9aa0a8;
+    --accent: #d9a441;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  .bg-video {
+    position: fixed;
+    inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
+  .bg-video.active { opacity: 1; }
+  .veil {
+    position: fixed;
+    inset: 0;
+    background: rgba(18,20,23,0.60);
+    z-index: 1;
+  }
+  .card { position: relative; z-index: 2; }
+  body {
+    font-family: 'Inter', -apple-system, 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 20px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .card { width: 100%; max-width: 420px; text-align: center; }
+
+  .avatar {
+    width: 108px; height: 108px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(217,164,65,0.55);
+    box-shadow: 0 0 28px rgba(217,164,65,0.30), 0 0 60px rgba(217,164,65,0.12);
+    padding: 4px;
+    background: var(--surface);
+    margin-bottom: 22px;
+  }
+  .tagline {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: var(--accent);
+    max-width: 320px;
+    margin: 0 auto 12px;
+  }
+  h1 {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: -0.4px;
+    margin-bottom: 14px;
+  }
+  .bio {
+    font-size: 15px;
+    line-height: 1.65;
+    color: var(--muted);
+    max-width: 320px;
+    margin: 0 auto 34px;
+  }
+  .links { display: flex; flex-direction: column; gap: 12px; }
+  .link {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 15px 18px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.14), rgba(255,255,255,0.05));
+    border: 1px solid rgba(255,255,255,0.18);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.28), inset 0 -1px 0 rgba(0,0,0,0.15), 0 8px 24px rgba(0,0,0,0.30);
+    backdrop-filter: blur(14px) saturate(1.4);
+    -webkit-backdrop-filter: blur(14px) saturate(1.4);
+    border-radius: 16px;
+    text-decoration: none;
+    color: var(--text);
+    font-size: 15px;
+    font-weight: 500;
+    transition: border-color .2s, transform .15s;
+  }
+  .link:hover { border-color: var(--accent); transform: translateY(-1px); }
+  .link svg { width: 20px; height: 20px; flex-shrink: 0; fill: var(--accent); filter: drop-shadow(0 0 5px rgba(217,164,65,0.40)); }
+  .link .arrow { margin-left: auto; fill: none; stroke: var(--muted); stroke-width: 2; width: 16px; height: 16px; }
+  .footer {
+    margin-top: 40px;
+    font-size: 12px;
+    color: var(--muted);
+  }
+  @media (min-width: 720px) {
+    .card { max-width: 460px; }
+    h1 { font-size: 34px; }
+  }
+h1,.tagline,.bio{text-shadow:0 1px 14px rgba(0,0,0,0.55);}
+.link{text-shadow:0 1px 8px rgba(0,0,0,0.55);}
+</style>
+</head>
+<body>
+  <video class="bg-video active" id="bgA" muted playsinline autoplay loop></video>
+  <video class="bg-video" id="bgB" muted playsinline loop></video>
+  <div class="veil"></div>
+  <main class="card">
+    <img class="avatar" src="avatar.png" alt="Mahmoud Farouk">
+    <h1>Mahmoud Farouq</h1>
+    <p class="tagline">Creative Video Editor Crafting Engaging Content for Brands and Creators</p>
+    <p class="bio">I help brands and creators turn ideas into engaging video content.</p>
+
+    <nav class="links">
+      <a class="link" href="https://drive.google.com/drive/folders/14Iok1amU50As7kVOenhOHklA7rVg-Gem">
+        <svg viewBox="0 0 24 24"><path d="M4 4h12l4 5v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm11 1.5V9h3.5L15 5.5z"/></svg>
+        Portfolio
+        <svg class="arrow" viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg>
+      </a>
+      <a class="link" href="https://www.instagram.com/mahmoud_farouk24">
+        <svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.8.1-1.1.1-1.5.2-1.9.3-.5.2-.8.4-1.1.7-.3.3-.5.6-.7 1.1-.1.4-.3.8-.3 1.9-.1 1.3-.1 1.7-.1 4.8s0 3.5.1 4.8c.1 1.1.2 1.5.3 1.9.2.5.4.8.7 1.1.3.3.6.5 1.1.7.4.1.8.3 1.9.3 1.3.1 1.7.1 4.8.1s3.5 0 4.8-.1c1.1-.1 1.5-.2 1.9-.3.5-.2.8-.4 1.1-.7.3-.3.5-.6.7-1.1.1-.4.3-.8.3-1.9.1-1.3.1-1.7.1-4.8s0-3.5-.1-4.8c-.1-1.1-.2-1.5-.3-1.9-.2-.5-.4-.8-.7-1.1-.3-.3-.6-.5-1.1-.7-.4-.1-.8-.3-1.9-.3-1.3-.1-1.7-.1-4.8-.1zm0 3.1a5 5 0 1 1 0 9.9 5 5 0 0 1 0-9.9zm0 8.1a3.2 3.2 0 1 0 0-6.3 3.2 3.2 0 0 0 0 6.3zm6.3-8.3a1.2 1.2 0 1 1-2.3 0 1.2 1.2 0 0 1 2.3 0z"/></svg>
+        Instagram
+        <svg class="arrow" viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg>
+      </a>
+      <a class="link" href="https://www.facebook.com/share/1DPirCyZne/">
+        <svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg>
+        Facebook
+        <svg class="arrow" viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg>
+      </a>
+      <a class="link" href="https://www.linkedin.com/in/mahmoud-farouk-aa04a5307">
+        <svg viewBox="0 0 24 24"><path d="M20.4 20.5h-3.6v-5.6c0-1.3 0-3-1.9-3s-2.1 1.4-2.1 2.9v5.7H9.3V9h3.4v1.6h.1c.5-.9 1.7-1.9 3.4-1.9 3.6 0 4.3 2.4 4.3 5.5v6.3zM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2zM7.1 20.5H3.5V9h3.6v11.5z"/></svg>
+        LinkedIn
+        <svg class="arrow" viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg>
+      </a>
+      <a class="link" href="https://wa.me/201010852223">
+        <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.8 1-.9 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.4zM12 21.8h-.1a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4a9.8 9.8 0 1 1 8.4 4.6zm8.3-18.1A11.8 11.8 0 0 0 12 .1C5.5.1.2 5.4.2 12c0 2.1.5 4.1 1.6 6L.1 24l6.2-1.6a11.9 11.9 0 0 0 5.7 1.4c6.5 0 11.8-5.3 11.8-11.9 0-3.1-1.2-6.1-3.5-8.2z"/></svg>
+        WhatsApp
+        <svg class="arrow" viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg>
+      </a>
+    </nav>
+
+    <p class="footer">© Mahmoud Farouk</p>
+  </main>
+  <script>
+    // Background clips: Mixkit Stock Video Free License (commercial use allowed, no attribution required)
+    const clips = [
+      'bg-1.mp4',  // gold bokeh A - mixkit.co/free-stock-video/blurred-multicolor-lights-bokeh-1177/ (gold-graded, modify allowed)
+      'bg-2.mp4',  // gold silk ink - mixkit.co/free-stock-video/abstract-video-of-slowly-flowing-colored-inks-44793/ (gold-graded)
+      'bg-3.mp4'   // gold bokeh B - mixkit.co/free-stock-video/blurred-multicolor-lights-bokeh-1177/ (gold-graded)
+    ];
+    const CLIP_MS = 4500;
+    let i = 0;
+    const A = document.getElementById('bgA'), B = document.getElementById('bgB');
+    let front = A, back = B;
+    front.src = clips[0];
+    front.play().catch(() => {});
+    setInterval(() => {
+      i = (i + 1) % clips.length;
+      back.src = clips[i];
+      back.currentTime = 0;
+      back.play().catch(() => {});
+      back.classList.add('active');
+      front.classList.remove('active');
+      [front, back] = [back, front];
+    }, CLIP_MS);
+  </script>
+</body>
+</html>
