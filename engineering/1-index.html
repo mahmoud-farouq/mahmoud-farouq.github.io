@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ENG.Mahmoud Mohammed Farouq | Maintenance Engineer</title>
+<meta name="description" content="Maintenance Engineer from Alexandria, Egypt. Industrial training across heavy machinery, hydraulics and mechatronics maintenance. OSHA certified.">
+<meta property="og:title" content="ENG.Mahmoud Mohammed Farouq">
+<meta property="og:description" content="Maintenance Engineer, Alexandria, Egypt">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mahmoud-farouq.github.io/engineering/">
+<meta property="og:image" content="https://mahmoud-farouq.github.io/engineering/og-image.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ENG.Mahmoud Mohammed Farouq">
+<meta name="twitter:description" content="Maintenance Engineer, Alexandria, Egypt">
+<meta name="twitter:image" content="https://mahmoud-farouq.github.io/engineering/og-image.jpg">
+<link rel="icon" href="portrait.jpg" type="image/jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a0b0d; --ink:#f2f0ea; --muted:#b9b6ac; --gold:#d8b45a; --gold-soft:rgba(216,180,90,.35);
+  --card:rgba(255,255,255,.055); --card-line:rgba(255,255,255,.12);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',system-ui,sans-serif; background:var(--bg); color:var(--ink);
+  line-height:1.6; overflow-x:hidden; -webkit-font-smoothing:antialiased;
+}
+/* ---- fixed video background ---- */
+.bgwrap{position:fixed; inset:0; z-index:-2; background:#0a0b0d url('bg-poster.jpg') center/cover no-repeat}
+.bgwrap video{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0; transition:opacity 1.6s ease}
+.bgwrap video.on{opacity:1}
+.veil{position:fixed; inset:0; z-index:-1;
+  background:
+    radial-gradient(120% 90% at 50% 0%, rgba(10,11,13,.55) 0%, rgba(10,11,13,.78) 55%, rgba(10,11,13,.92) 100%),
+    linear-gradient(180deg, rgba(216,180,90,.06), rgba(10,11,13,0) 30%);
+}
+/* ---- layout ---- */
+.wrap{max-width:920px; margin:0 auto; padding:0 22px}
+section{padding:74px 0}
+.reveal{opacity:0; transform:translateY(34px); transition:opacity .8s ease, transform .8s cubic-bezier(.22,.8,.3,1)}
+.reveal.in{opacity:1; transform:none}
+.reveal .st{opacity:0; transform:translateY(24px); transition:opacity .65s ease var(--d,0ms), transform .65s cubic-bezier(.22,.8,.3,1) var(--d,0ms)}
+.reveal.in .st{opacity:1; transform:none}
+.note{color:var(--muted); font-size:.88rem; margin-top:14px}
+.ic{width:19px; height:19px; fill:var(--gold); vertical-align:-4px; margin-right:9px}
+.fact .ic{width:14px; height:14px; vertical-align:-2px; margin-right:6px; fill:var(--muted)}
+.sgroup h3 .ic{width:16px; height:16px; vertical-align:-3px}
+/* ---- hero ---- */
+.hero{min-height:100svh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:40px 22px 70px; position:relative}
+.portrait{width:min(58vw,300px); height:min(58vw,300px); border-radius:50%; object-fit:cover;
+  border:3px solid var(--gold-soft);
+  box-shadow:0 0 0 10px rgba(216,180,90,.07), 0 0 70px rgba(216,180,90,.22), 0 24px 60px rgba(0,0,0,.55);
+}
+h1{font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:clamp(1.12rem,5.6vw,2.5rem); letter-spacing:.01em; margin-top:30px; line-height:1.15; white-space:nowrap}
+h1 .eng{color:var(--gold)}
+.role{margin-top:12px; font-family:'Space Grotesk',sans-serif; font-size:clamp(.95rem,2.6vw,1.15rem); letter-spacing:.24em; text-transform:uppercase; color:var(--gold)}
+.loc{margin-top:14px; color:var(--muted); font-size:.95rem}
+.scrollcue{position:absolute; bottom:26px; left:50%; transform:translateX(-50%); color:var(--muted); font-size:.78rem; letter-spacing:.28em; text-transform:uppercase; animation:bob 2.4s ease-in-out infinite; display:flex; flex-direction:column; align-items:center; gap:7px}
+.scrollcue svg{width:20px; height:20px; stroke:var(--gold); stroke-width:2.2; fill:none; animation:cueglow 2.4s ease-in-out infinite}
+@keyframes cueglow{0%,100%{opacity:.55}50%{opacity:1}}
+@keyframes bob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,9px)}}
+/* ---- sections ---- */
+.kicker{font-family:'Space Grotesk',sans-serif; color:var(--gold); letter-spacing:.3em; text-transform:uppercase; font-size:.78rem; margin-bottom:10px}
+h2{font-family:'Space Grotesk',sans-serif; font-size:clamp(1.35rem,4vw,1.9rem); font-weight:600; margin-bottom:26px}
+.about p{color:#ddd9cf; font-size:1.04rem; max-width:60ch}
+.facts{display:flex; flex-wrap:wrap; gap:10px; margin-top:22px}
+.fact{border:1px solid var(--card-line); background:var(--card); backdrop-filter:blur(10px); border-radius:999px; padding:8px 16px; font-size:.85rem; color:var(--muted)}
+/* training cards */
+.tcard{background:var(--card); border:1px solid var(--card-line); border-left:3px solid var(--gold); border-radius:14px; padding:22px 24px; margin-bottom:18px; backdrop-filter:blur(12px)}
+.tcard h3{font-family:'Space Grotesk',sans-serif; font-size:1.12rem; font-weight:600}
+.tcard .tag{display:inline-block; margin:6px 0 10px; font-size:.76rem; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); border:1px solid var(--gold-soft); border-radius:999px; padding:3px 12px}
+.tcard p{color:var(--muted); font-size:.95rem}
+/* skills */
+.sgroup{margin-bottom:24px}
+.sgroup h3{font-family:'Space Grotesk',sans-serif; font-size:.98rem; color:var(--gold); font-weight:600; margin-bottom:12px}
+.chips{display:flex; flex-wrap:wrap; gap:9px}
+.chip{background:var(--card); border:1px solid var(--card-line); backdrop-filter:blur(10px); border-radius:10px; padding:8px 15px; font-size:.88rem; color:#e6e3da}
+/* certifications */
+.clist{list-style:none}
+.clist li{display:flex; gap:14px; align-items:flex-start; padding:13px 0; border-bottom:1px solid rgba(255,255,255,.07)}
+.clist li:last-child{border-bottom:none}
+.clist .dot{flex:0 0 auto; width:9px; height:9px; margin-top:8px; border-radius:50%; background:var(--gold); box-shadow:0 0 10px var(--gold-soft)}
+.clist b{font-weight:600; font-size:.98rem}
+.clist span{display:block; color:var(--muted); font-size:.87rem}
+/* education */
+.ecard{background:var(--card); border:1px solid var(--card-line); border-radius:14px; padding:20px 24px; margin-bottom:14px; backdrop-filter:blur(12px)}
+.ecard b{font-family:'Space Grotesk',sans-serif; font-size:1.04rem}
+.ecard span{display:block; color:var(--muted); font-size:.9rem; margin-top:4px}
+/* contact */
+.contact{text-align:center; padding-bottom:56px}
+.cbtns{display:flex; flex-direction:column; gap:14px; max-width:420px; margin:30px auto 0}
+.cbtn{display:flex; align-items:center; gap:14px; padding:15px 22px; border-radius:14px;
+  background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.16); backdrop-filter:blur(14px);
+  color:var(--ink); text-decoration:none; font-family:'Space Grotesk',sans-serif; font-size:1rem; font-weight:500;
+  transition:transform .18s ease, border-color .18s ease, background .18s ease}
+.cbtn:hover{transform:translateY(-2px); border-color:var(--gold-soft); background:rgba(216,180,90,.10)}
+.cbtn.cv{border-color:var(--gold-soft); background:rgba(216,180,90,.12)}
+.cbtn svg{flex:0 0 auto; width:22px; height:22px; fill:var(--gold)}
+.cbtn small{margin-left:auto; color:var(--muted); font-family:'Inter',sans-serif; font-size:.78rem; font-weight:400}
+@media(min-width:560px){.cbtns{flex-direction:row; max-width:none; justify-content:center}.cbtn small{display:none}}
+footer{text-align:center; color:#777468; font-size:.78rem; padding:0 22px 34px}
+@media (prefers-reduced-motion:reduce){
+  .reveal{opacity:1; transform:none; transition:none}
+  .scrollcue,.scrollcue svg{animation:none}
+}
+</style>
+</head>
+<body>
+
+<div class="bgwrap" id="bgwrap">
+  <video muted loop playsinline preload="auto" poster="bg-poster.jpg"><source src="bg-1.mp4" type="video/mp4"></video>
+  <video muted loop playsinline preload="none"><source src="bg-2.mp4" type="video/mp4"></video>
+  <video muted loop playsinline preload="none"><source src="bg-3.mp4" type="video/mp4"></video>
+</div>
+<div class="veil"></div>
+
+<header class="hero">
+  <img class="portrait" src="portrait.jpg" width="1200" height="1200" fetchpriority="high" alt="Portrait of ENG.Mahmoud Mohammed Farouq">
+  <h1><span class="eng">ENG.</span>Mahmoud Mohammed Farouq</h1>
+  <div class="role">Maintenance Engineer</div>
+  <div class="loc">Alexandria, Egypt</div>
+  <div class="scrollcue"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8l8 8 8-8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Scroll</span></div>
+</header>
+
+<main class="wrap">
+
+  <section class="about reveal">
+    <div class="kicker">About</div>
+    <h2><svg class="ic" viewBox="0 0 24 24"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm0 2c-4.4 0-8 2.2-8 5v1h16v-1c0-2.8-3.6-5-8-5z"/></svg>Fresh graduate, trained in the field</h2>
+    <p>Agricultural Engineering graduate, Faculty of Agriculture, Alexandria University (Class of 2026), with industrial training in heavy machinery, hydraulics and maintenance operations. OSHA certified. Full details are in the CV, one tap below.</p>
+    <div class="facts">
+      <span class="fact"><svg class="ic" viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16A1.5 1.5 0 1 1 8 14.5 1.5 1.5 0 0 1 6.5 16zm11 0a1.5 1.5 0 1 1 1.5-1.5 1.5 1.5 0 0 1-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/></svg>Valid Egyptian Driving License</span>
+      <span class="fact"><svg class="ic" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm7.9 9h-3a15.6 15.6 0 0 0-1.2-4.6A8.02 8.02 0 0 1 19.9 11zM12 4.1c.9 1.1 1.7 2.9 2 6.9h-4c.3-4 1.1-5.8 2-6.9zM4.1 13h3c.2 2.7.8 4.8 1.7 6.2A8.03 8.03 0 0 1 4.1 13zm3-2h-3a8.03 8.03 0 0 1 4.7-7.2C7.9 6.2 7.3 8.3 7.1 11zM12 19.9c-.9-1.1-1.7-2.9-2-6.9h4c-.3 4-1.1 5.8-2 6.9zm2.3-.7c.9-1.4 1.5-3.5 1.7-6.2h3a8.02 8.02 0 0 1-4.7 6.2z"/></svg>Arabic · Native</span>
+      <span class="fact"><svg class="ic" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm7.9 9h-3a15.6 15.6 0 0 0-1.2-4.6A8.02 8.02 0 0 1 19.9 11zM12 4.1c.9 1.1 1.7 2.9 2 6.9h-4c.3-4 1.1-5.8 2-6.9zM4.1 13h3c.2 2.7.8 4.8 1.7 6.2A8.03 8.03 0 0 1 4.1 13zm3-2h-3a8.03 8.03 0 0 1 4.7-7.2C7.9 6.2 7.3 8.3 7.1 11zM12 19.9c-.9-1.1-1.7-2.9-2-6.9h4c-.3 4-1.1 5.8-2 6.9zm2.3-.7c.9-1.4 1.5-3.5 1.7-6.2h3a8.02 8.02 0 0 1-4.7 6.2z"/></svg>English · Professional / Technical</span>
+    </div>
+  </section>
+
+  <section class="reveal">
+    <div class="kicker">Education</div>
+    <h2><svg class="ic" viewBox="0 0 24 24"><path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/></svg>Education</h2>
+    <div class="ecard"><b>B.Sc. in Agricultural Engineering</b><span>Faculty of Agriculture, Alexandria University · Graduation: 2026</span></div>
+    <div class="ecard"><b>Professional Diploma in Sales &amp; Marketing</b><span>Completed</span></div>
+  </section>
+
+  <section class="reveal">
+    <div class="kicker">Training</div>
+    <h2><svg class="ic" viewBox="0 0 24 24"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6l3 3-2 2-3-3-1.3 4.3c-1.1 2.4-.7 5.4 1.3 7.4 2 2 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1 .1-1.4z"/></svg>Industrial Training Experience</h2>
+
+    <article class="tcard">
+      <h3><svg class="ic" viewBox="0 0 24 24"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-2 .89-2 2v11c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/></svg>CLAAS Heavy Equipment Dealership</h3>
+      <span class="tag">Trainee Engineer · Heavy Machinery &amp; Technical Service</span>
+      <p>Preventive maintenance and technical service on tractors and harvesting equipment, alongside senior service engineers.</p>
+    </article>
+
+    <article class="tcard">
+      <h3><svg class="ic" viewBox="0 0 24 24"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-2 .89-2 2v11c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/></svg>Alexandria Port Authority (APDX)</h3>
+      <span class="tag">Trainee Engineer · Port Maintenance &amp; Engineering Operations</span>
+      <p>Maintenance and engineering operations with mechanical and mechatronics teams across port workshops and cargo-handling facilities.</p>
+    </article>
+
+    <article class="tcard">
+      <h3><svg class="ic" viewBox="0 0 24 24"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-2 .89-2 2v11c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/></svg>Alexandria Shipyard Company</h3>
+      <span class="tag">Trainee Engineer · Shipbuilding &amp; Mechanical Operations</span>
+      <p>Field exposure to heavy industrial machinery maintenance within structured shipyard engineering workflows.</p>
+    </article>
+  </section>
+
+  <section class="reveal">
+    <div class="kicker">Certifications</div>
+    <h2><svg class="ic" viewBox="0 0 24 24"><path d="M12 2a5 5 0 0 1 3 9v4.6l-3-1.8-3 1.8V11a5 5 0 0 1 3-9zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg>Certifications &amp; Courses</h2>
+    <ul class="clist">
+      <li><span class="dot"></span><div><b>OSHA General Industry Safety &amp; Health</b><span>Certification</span></div></li>
+      <li><span class="dot"></span><div><b>Hydraulic &amp; Fluid Power Systems</b><span>Course</span></div></li>
+      <li><span class="dot"></span><div><b>SolidWorks &amp; AutoCAD</b><span>Training Courses</span></div></li>
+      <li><span class="dot"></span><div><b>ICDL</b><span>Certification · Microsoft Office Suite</span></div></li>
+    </ul>
+  </section>
+
+  <section class="reveal">
+    <div class="kicker">Skills</div>
+    <h2><svg class="ic" viewBox="0 0 24 24"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6a3.6 3.6 0 1 1 0-7.2 3.6 3.6 0 0 1 0 7.2z"/></svg>Skill Areas</h2>
+    <div class="chips">
+      <span class="chip"><svg class="ic" viewBox="0 0 24 24"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6a3.6 3.6 0 1 1 0-7.2 3.6 3.6 0 0 1 0 7.2z"/></svg>Heavy Machinery &amp; Hydraulics</span>
+      <span class="chip"><svg class="ic" viewBox="0 0 24 24"><path d="M20 18c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2H4C2.9 4 2 4.9 2 6v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6z"/></svg>Engineering Software &amp; Safety</span>
+      <span class="chip"><svg class="ic" viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>Professional &amp; Interpersonal</span>
+    </div>
+    <p class="note">The detailed skill list is inside the CV.</p>
+  </section>
+
+  <section class="contact reveal">
+    <div class="kicker">Contact</div>
+    <h2><svg class="ic" viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>Let's talk machinery</h2>
+    <div class="cbtns">
+      <a class="cbtn cv" href="https://drive.google.com/file/d/1rUZm9yqAvfqOAMiNLEXeUygH3YKYmjmi/view" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+        View CV <small>PDF</small>
+      </a>
+      <a class="cbtn" href="https://www.linkedin.com/in/mahmoud-farouk-aa04a5307" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.55V9h3.57v11.45z"/></svg>
+        LinkedIn <small>mahmoud-farouk</small>
+      </a>
+      <a class="cbtn" href="https://wa.me/201010852223" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm0 18.03a8.1 8.1 0 0 1-4.13-1.13l-.3-.18-3.07.81.82-2.99-.2-.31a8.07 8.07 0 0 1-1.24-4.32c0-4.47 3.64-8.11 8.12-8.11 4.47 0 8.11 3.64 8.11 8.11 0 4.47-3.64 8.12-8.11 8.12zm4.45-6.08c-.24-.12-1.44-.71-1.66-.79-.22-.08-.39-.12-.55.12-.16.24-.63.79-.77.95-.14.16-.28.18-.53.06-.24-.12-1.03-.38-1.96-1.21-.72-.64-1.21-1.44-1.35-1.68-.14-.24-.02-.37.11-.5.11-.11.24-.28.37-.42.12-.14.16-.24.24-.4.08-.16.04-.31-.02-.43-.06-.12-.55-1.32-.75-1.81-.2-.48-.4-.41-.55-.42h-.47c-.16 0-.43.06-.65.31-.22.24-.86.84-.86 2.05 0 1.21.88 2.37 1 2.53.12.16 1.72 2.63 4.18 3.69.58.25 1.04.4 1.4.52.59.19 1.12.16 1.54.1.47-.07 1.44-.59 1.64-1.16.2-.57.2-1.05.14-1.16-.06-.1-.22-.16-.46-.28z"/></svg>
+        WhatsApp <small>+20 101 085 2223</small>
+      </a>
+      <a class="cbtn" href="mailto:mf128248@gmail.com">
+        <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        Email <small>mf128248@gmail.com</small>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  Background footage: free-licensed stock (Pexels), illustrative and not project work.<br>
+  © 2026 ENG.Mahmoud Mohammed Farouq
+</footer>
+
+<script>
+// scroll reveal
+const io = new IntersectionObserver((es)=>{
+  es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>{
+  const kids = el.querySelectorAll('h2, p, .fact, .tcard, .sgroup, .clist li, .ecard, .cbtn, .facts');
+  kids.forEach((k,i)=>{ k.classList.add('st'); k.style.setProperty('--d', Math.min(i*90,720)+'ms'); });
+  io.observe(el);
+});
+
+// background video crossfade playlist
+const vids=[...document.querySelectorAll('.bgwrap video')];
+let cur=0; vids[0].classList.add('on');
+const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+vids[0].play().catch(()=>{});
+function next(){
+  const n=(cur+1)%vids.length;
+  const v=vids[n];
+  v.preload='auto';
+  v.currentTime=0;
+  v.play().catch(()=>{});
+  v.classList.add('on');
+  vids[cur].classList.remove('on');
+  setTimeout(()=>{ vids[cur].pause(); },1800);
+  cur=n;
+}
+if(!reduced && vids.length>1){
+  setTimeout(()=>{ setInterval(next,7000); },7000);
+}
+</script>
+</body>
+</html>
